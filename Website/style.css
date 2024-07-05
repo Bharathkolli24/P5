@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+/* resets  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{                      /* we'll use this by defining var() in further code in CSS */
+    ---primary-text-color:#183b56;
+    ---secondary-text-color:#577591;
+    ---accent-color:#2294ed;
+    ---accent-color-dark:#1d69a3;
+    ---padding-inline-section:20px;
+}
+
+body{
+    font-family: 'Poppins' , sans-serif;
+    color: var(---primary-text-color);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: 'Roboto' , sans-serif;
+    font-size: 1.2rem;
+    color: var(---secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* utility classes */
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(---padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color: var(---primary-text-color);
+}
+
+.hover-link:hover{
+    color: var(---accent-color);
+    transition: 0.2s ease-out;
+}
+
+.primary-button {
+    background-color: var(---accent-color);
+    border-radius: 6px;
+    font-weight: 500;
+    color: white !important; /* under any circumstances it should be white */
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var (---secondary-text-color);  /* 0->x direction 0-> y direction  2px -> blur*/
+}
+
+.primary-button:hover {
+    background-color: var(---accent-color-dark);
+}
+
+.secondary-button {
+    border: 0.5px solid var(---secondary-text-color);
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(---primary-text-color);
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+    margin: auto;
+}
+
+.secondary-button:hover {
+    border-color: var(---accent-color);
+    color: var(---accent-color) !important;
+}
+
+/* top banner */
+.top-banner {   /* html line-10 */
+    background-image: url('/assets/asset\ 30.png');
+    background-color: #4fb3d4;
+    background-size: 300px;
+    /* background-repeat: no-repeat ; if we put this the bcg img will be remain in 300px on left side */
+}   
+.banner-text{  /* html line-12 */
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+}
+
+/* nav bar */
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.company-logo img {
+    width: 200px;
+}
+
+.nav-links {
+    flex-basis: 730px;  /*by defining flex basis we can also define its width */
+}
+
+.nav-links ul {
+    justify-content: end;
+    gap: 40px;
+    font-weight: 550;
+}
+
+/* HEADER SECTION */
+
+header{
+    padding: 50px var(---padding-inline-section);
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+} 
+
+.header-left {
+    max-width: 40vw; /*max-width -> can't get bigger than this  */
+}
+
+.header-left h1{
+    margin-top: 20px;
+
+}
+
+.get-started-btn {
+    margin-top:20px;
+}
+
+.header-right img {
+    width: 600px;
+}
+
+/* COMPANIES SECTION */
+.companies-header {
+    text-align: center;
+    margin-block: 30px;  /*margin block defines margin for both top and bottom */
+    color: var(---primary-text-color);
+}
+
+.logos {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 40px;
+}
+
+/* FEATURES SECTION */
+.features-header {
+    text-align: center;
+}
+
+.features-section{
+    padding: 80px var(---padding-inline-section) 0; /* (3 values => 80px-top padding,middle - left & right padding, 0-bottom padding)*/
+    background-image: url('./assets/asset\ 32.png');    
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.features-header-text {
+    font-weight:500;
+    margin-top: 40px;
+} 
+
+.secondary-button{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.features-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+
+.features-card {
+    flex-direction: column;  /* content come will come one by one*/
+    gap: 10px;
+    max-width: 30%;
+}
+
+.features-card img {
+    width: 60px;
+}
+
+    /* BIG FEATURES SECTION */
+
+.big-feature-section {
+    padding: 30px var(---padding-inline-section) 0;
+}
+
+.big-feature-container {
+    gap: 30px;
+}
+
+.feature-img img {
+    width: 100%;
+}
+
+.feature-description {
+    flex-direction: column;
+    align-items: flex-start; /* at first we've written flex:center so it'll be in center ..if we put flex-start content will start from left side */
+} 
+
+.feature-description h3{
+    margin-top: 20px;
+}
+
+.feature-description h4{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* EXAMPLES SECTION */
+
+.examples-header{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.examples-header-text {
+    margin-bottom: 2px;
+}
+
+/* If we define flex in HTML line 157, we can also write like this */
+/* .examples-header{
+    flex-direction: column;
+    gap: 20px;
+} */
+
+.examples-area{
+    justify-content: space-between;
+    margin-block: 30px;
+}
+
+.examples-card {
+    width: 20%;
+    position: relative;  /*to absolute(css - line 262) the position of h3 we defined relative here*/ 
+    min-height: 400px; /*height should be 400px (compulsory)*/
+    background: black;
+    margin-left: 20px; 
+    background-image:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)) , url('./assets/asset\ 35.jpeg');  /*with the help of linear gradient we can define the color form bottom to top*/
+    background-size: cover;
+    transition: 0.2s ease-out;
+}
+
+.examples-card:hover {
+    box-shadow: 0 0 10px #888;
+}
+
+.examples-card:nth-child(3) {
+    background-image:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)) , url('./assets/asset\ 36.jpeg');
+    background-size: cover; 
+}
+
+.examples-card:nth-child(4) {
+    background-image:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)) , url('./assets/asset\ 37.jpeg');
+    background-size: cover;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+
+/* CTA SECTION */
+
+.cta-section-container {
+    flex-direction: column;
+    gap: 40px;
+    color: white;
+}
+
+.cta-section {
+    background-color: #183b54;
+    padding: 120px var(---padding-inline-section) 80px;   
+}
+
+.cta-section-container p{
+    color: white;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    padding-block: 80px;
+    background-color: #ebf2fa;
+}
+
+.footer-container {
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+.link-column{
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* SUB FOOTER */
+
+.sub-footer-container{
+    justify-content: center;
+    gap: 30px ;
+}
+
+.sub-footer{
+    background-color: #b9cde4;
+    padding: var(---padding-inline-section);
+}
+
+
+
